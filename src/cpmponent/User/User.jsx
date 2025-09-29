@@ -9,6 +9,8 @@ const User = ({ user }) => {
     padding: "10px",
     margin: "10px",
   };
+
+  
   return (
     <div>
       <div style={userstyle}>
@@ -16,6 +18,7 @@ const User = ({ user }) => {
         <p>email:{email}</p>
         <p> phone{phone}</p>
         <Link to={`/users/${id}`}>show de</Link>
+        
       </div>
     </div>
   );
