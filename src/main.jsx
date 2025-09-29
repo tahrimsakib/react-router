@@ -9,6 +9,7 @@ import Root from "./cpmponent/root/Root.jsx";
 import Home from "./cpmponent/Home/Home.jsx";
 import Mobiles from "./cpmponent/Mobiles/Mobiles.jsx";
 import Laptops from "./cpmponent/Laptops/Laptops.jsx";
+import Users from "./cpmponent/Users/Users.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,9 @@ const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "Mobiles", Component: Mobiles },
       { path: "Laptops", Component: Laptops },
+      {path:'Users' , 
+        loader: ()=> fetch('https://jsonplaceholder.typicode.com/users'),
+        Component: Users}
     ],
   },
   {
